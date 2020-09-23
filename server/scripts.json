@@ -1,0 +1,14 @@
+{
+  "$schema": "https://deno.land/x/denon@2.4.0/schema.json",
+  "scripts": {
+    "start": {
+      "cmd": "deno run --unstable --watch server.ts",
+      "allow": [
+        "plugin",
+        "read",
+        "net",
+        "write"
+      ]
+    }
+  }
+}
