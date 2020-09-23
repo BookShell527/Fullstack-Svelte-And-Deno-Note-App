@@ -97,12 +97,6 @@ router.patch("/update/:id", async (ctx: RouterContext) => {
             }
         });
 
-        if (!modifiedCount) {
-            ctx.response.status = 404;
-            ctx.response.body = { msg: "note does not exist" };
-            return;
-        }
-
         ctx.response.status = 201;
         ctx.response.body = await coll.findOne({ _id: { $oid: id! } });
     } catch (err) {
